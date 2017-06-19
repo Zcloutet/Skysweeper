@@ -133,13 +133,13 @@ class Skysweeper():
                         self.mines += 1       
 
                     #Keys:
-                    #0 button widget
-                    #1 mine (1 = yes , 0 = no)
+                    #0 button 
+                    #1 mine 1 = yes , 0 = no
                     #2 state 0 = unclicked, 1 = clicked, 2 = flagged)
-                    #3 button x value
-                    #4 [x, y] coordinates
+                    #3 x value of button
+                    #4 [x, y] coords
                     #5 nearby mines
-                # instantiate button, x [x] is called from the previously set dictionary
+                # instantiate button with details stored inside a list which is stored in the previously set dictionary.
                 self.tiles[x] = [Button(window, image = default_img),mine,0,x,[x_input, y_input], 0]
                 self.tiles[x][0].bind('<Button-1>',self.leftClick_wrapper(x))
                 self.tiles[x][0].bind('<Button-3>',self.rightClick_wrapper(x))
